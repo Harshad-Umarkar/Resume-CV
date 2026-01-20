@@ -1,0 +1,58 @@
+:root {
+            --primary-dark: #1a2a3a;
+            --accent-blue: #3498db;
+            --text-gray: #555;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #e9ecef;
+        }
+        .resume-container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            display: flex;
+            min-height: 297mm; /* A4 Ratio */
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        /* LEFT SIDEBAR */
+        .sidebar {
+            width: 33%;
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 30px 20px;
+        }
+        /* RIGHT CONTENT */
+        .main-content {
+            width: 67%;
+            padding: 40px;
+        }
+        h1 { margin: 0; font-size: 26px; letter-spacing: 1px; }
+        h2 { font-size: 16px; border-bottom: 2px solid var(--accent-blue); padding-bottom: 5px; margin-top: 25px; text-transform: uppercase; color: var(--primary-dark); }
+        .sidebar h2 { color: var(--accent-blue); border-bottom: 1px solid #444; margin-top: 30px; }
+        
+        .contact-info p { font-size: 13px; margin: 10px 0; display: flex; align-items: center; }
+        .skill-group { margin-bottom: 15px; }
+        .skill-group h3 { font-size: 14px; margin-bottom: 5px; color: #ecf0f1; }
+        .skill-tag { background: #34495e; font-size: 12px; padding: 3px 8px; border-radius: 3px; display: inline-block; margin: 2px; }
+        
+        .section-item { margin-bottom: 20px; }
+        .item-header { display: flex; justify-content: space-between; font-weight: bold; font-size: 15px; }
+        .item-sub { color: var(--accent-blue); font-weight: 600; font-size: 14px; }
+        
+        ul { padding-left: 18px; font-size: 13.5px; color: var(--text-gray); }
+        li { margin-bottom: 4px; }
+        p { font-size: 13.5px; color: var(--text-gray); }
+        .contact-info>p{color: #fff;}
+        @media print {
+            body { background: none; padding: 0; }
+            .resume-container { box-shadow: none; width: 100%; }
+            .sidebar { -webkit-print-color-adjust: exact; }
+        }
+        .qr-code{
+            width: 5rem;
+        }
