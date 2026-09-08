@@ -1,116 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.4;
-  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.25;
+  color: #111;
   margin: 0;
-  padding: 20px;
-  background-color: #e9ecef;
+  padding: 0;
+  background: #fff;
 }
 .resume-container {
-  max-width: 1000px;
+  width: 210mm;
+  min-height: 297mm;
+  max-width: 100%;
   margin: auto;
-  background: #fff;
-  display: flex;
-  min-height: 297mm; /* A4 Ratio */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-/* LEFT SIDEBAR */
-.sidebar {
-  width: 33%;
-  background-color: #1a2a3a;
-  color: white;
-  padding: 30px 20px;
-}
-/* RIGHT CONTENT */
-.main-content {
-  width: 67%;
-  padding: 40px;
+  padding: 13mm 15mm;
 }
 h1 {
   margin: 0;
-  font-size: 26px;
-  letter-spacing: 1px;
+  font-size: 23px;
+  letter-spacing: 0.4px;
+  text-align: center;
 }
 h2 {
-  font-size: 16px;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 5px;
-  margin-top: 25px;
-  text-transform: uppercase;
-  color: #1a2a3a;
-}
-.sidebar h2 {
-  color: #3498db;
-  border-bottom: 1px solid #444;
-  margin-top: 30px;
-}
-
-.contact-info p {
   font-size: 13px;
-  margin: 10px 0;
+  border-bottom: 1px solid #111;
+  padding-bottom: 2px;
+  margin: 11px 0 5px;
+  text-transform: uppercase;
+  color: #111;
+}
+.resume-header {
+  text-align: center;
+  border-bottom: 1px solid #111;
+  padding-bottom: 6px;
+}
+.job-title {
+  font-weight: bold;
+  margin: 2px 0 5px;
+}
+.contact-info {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  font-size: 10px;
+  font-style: normal;
 }
-.skill-group {
-  margin-bottom: 15px;
-}
-.skill-group h3 {
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: #ecf0f1;
-}
-.skill-tag {
-  background: #34495e;
-  font-size: 12px;
-  padding: 3px 8px;
-  border-radius: 3px;
-  display: inline-block;
-  margin: 2px;
+.contact-info span:not(:last-child)::after {
+  content: " |";
 }
 
-.section-item {
-  margin-bottom: 20px;
+.main-content p {
+  font-size: 10.5px;
+  margin: 3px 0;
 }
-.item-header {
+.section-item {
+  margin-bottom: 7px;
+}
+h3 {
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
-  font-size: 15px;
+  gap: 10px;
+  font-size: 11px;
+  margin: 0;
 }
 .item-sub {
-  color: #3498db;
-  font-weight: 600;
-  font-size: 14px;
+  font-size: 10px;
+  font-weight: bold;
+  margin: 2px 0;
 }
-
 ul {
-  padding-left: 18px;
-  font-size: 13.5px;
-  color: #555;
+  margin: 2px 0 0;
+  padding-left: 17px;
+  font-size: 10px;
 }
 li {
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
-p {
-  font-size: 13.5px;
-  color: #555;
-}
-.contact-info > p {
-  color: #fff;
+@page {
+  size: A4;
+  margin: 0;
 }
 @media print {
-  body {
-    background: none;
-    padding: 0;
-  }
   .resume-container {
-    box-shadow: none;
-    width: 100%;
-  }
-  .sidebar {
-    -webkit-print-color-adjust: exact;
+    width: 210mm;
+    height: 297mm;
+    padding: 13mm 15mm;
   }
 }
-.qr-code {
-  width: 5rem;
+@media screen and (max-width: 700px) {
+  .resume-container {
+    padding: 24px 20px;
+  }
+  h3 {
+    display: block;
+  }
+  h3 span {
+    display: block;
+    margin-top: 1px;
+  }
 }
